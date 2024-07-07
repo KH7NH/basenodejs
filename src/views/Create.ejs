@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Home Page</title>
     <meta charset="utf-8">
@@ -9,31 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<style>
-    .table-containner {
-        padding: 15px 20px;
-    }
-    .titles {
-        font-size: 25px;
-        font-weight: 600;
-        padding-bottom: 10px;
-    }
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
 
-    th,
-    td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    tr:hover {
-        background-color: #ccc;
-    }
-</style>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -41,49 +18,12 @@
                 <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/hoidanit">Home</a></li>
-                <li><a href="/create">Create Users </a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/create">Create User </a></li>
             </ul>
         </div>
     </nav>
-    <div class="table-containner">
-        <div class="titles">List Users</div>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Name</th>
-                <th>City</th>
-                <th>Action</th>
-            </tr>
-            
-            <% for (let i = 0; i<listUsers.length;i++) { %>
-                
-                <% } %>
-            <% listUsers.forEach(function(user) { %>
-                <tr>
-                    <td>
-                        <%= user.id %>
-                    </td>
-                    <td>
-                        <%= user.email %>
-                    </td>
-                    <td>
-                        <%= user.name %>
-                    </td>
-                    <td>
-                        <%= user.city %>
-                    </td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <% }) %>
-        </table>
-    </div>
-    
-    <!-- <div class="form-add-new">
+    <div class="form-add-new">
         <form action="create-user" method="post">
             <fieldset>
                 <legend>Add new users</legend>
@@ -106,8 +46,8 @@
                 </div>
             </fieldset>
         </form>
-        
-    </div> -->
+
+    </div>
 </body>
 
 </html>
