@@ -38,11 +38,12 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand" href="#">User Management</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/hoidanit">Home</a></li>
-                <li><a href="/create">Create Users </a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/create">Create User</a></li>
+
             </ul>
         </div>
     </nav>
@@ -75,7 +76,7 @@
                         <%= user.city %>
                     </td>
                     <td>
-                        <button>Edit</button>
+                        <a href="/update/<%= user.id %>">Edit</a>
                         <button>Delete</button>
                     </td>
                 </tr>

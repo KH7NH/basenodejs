@@ -13,3 +13,6 @@
     margin: 10px;
     cursor: pointer;
 }
+.d-none{
+    display: none;
+}
