@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%= JSON.stringify(userEdit) %>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/create">Create User </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="form-add-new">
+            <form action="/delete-user" method="post">
+                <fieldset>
+                    <legend>Delete A User</legend>
+                    <div class="form">
+                        <div class="input-group d-none">
+                            <label for="">Id: </label>
+                            <input type="text" name="userId" value="<%= userEdit.id %>">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Are you sure delete this user with Email: </label>
+                            <input type="text" name="email" value="<%= userEdit.email %>">
+                        </div>
+                        <div>
+                            <button>Confirm</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+</body>
+
+</html>
